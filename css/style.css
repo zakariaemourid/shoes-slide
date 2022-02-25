@@ -1,5 +1,6 @@
 :root {
   --background-color: #cb021c;
+  --text-color: white;
 }
 * {
   text-decoration: none;
@@ -7,6 +8,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: var(--background-color);
   font-size: 16px;
@@ -17,7 +19,7 @@ body {
   top: 2.1rem;
   left: 2rem;
   font-size: 3rem;
-  color: white;
+  color: var(--text-color);
   cursor: pointer;
 }
 .phone {
@@ -25,7 +27,7 @@ body {
   top: 2.1rem;
   right: 2rem;
   font-size: 3rem;
-  color: white;
+  color: var(--text-color);
   cursor: pointer;
 }
 header {
@@ -39,14 +41,14 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
-  color: white;
+  color: var(--text-color);
   font-size: 3rem;
   margin: 0 auto;
 }
 .header-text h1 {
   font-size: 2.54rem;
   font-weight: 300;
-  color: white;
+  color: var(--text-color);
   text-align: center;
 }
 .header-text p {
@@ -75,24 +77,72 @@ header {
   opacity: 0.6;
   cursor: pointer;
 }
+
+main {
+  width: 100%;
+  margin-top: 170px;
+}
+.slider-container {
+  overflow: hidden;
+  height: 450px;
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+}
+.slide {
+  position: absolute;
+  transition: 0s ease-in-out all;
+  width: 100%;
+  height: 100%;
+}
+.slide {
+  transform: translateX(0);
+}
+.slide h1 {
+  color: var(--text-color);
+  font-size: 4rem;
+  margin-top: -2rem;
+}
+.slide:nth-child(1) {
+  left: 0;
+}
+.slide:nth-child(2) {
+  left: 100%;
+}
+
+.slide:nth-child(3) {
+  left: 200%;
+}
+.slide:nth-child(4) {
+  left: 300%;
+}
 img {
   width: 400px;
   height: 400px;
   object-fit: cover;
   background-color: yellow;
 }
-main {
-  width: 100%;
-  margin-top: 170px;
+/* sidebar */
+.side-bar {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 30vw;
+  left: -100%;
+  background-color: aliceblue;
+  z-index: 5000;
+  transition: 0.2s ease-in-out all;
 }
-.image {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.close {
+  position: absolute;
+  font-size: 3rem;
+  right: 2rem;
+  cursor: pointer;
 }
-.image h1 {
-  color: white;
-  font-size: 4rem;
-  margin-top: -2rem;
+.close:hover {
+  transform: rotate(-90deg);
+  transition: 0.3s ease-in-out all;
+  color: black;
 }
+/* end sidebar */
