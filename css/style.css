@@ -21,6 +21,10 @@ body {
   font-size: 3rem;
   color: var(--text-color);
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.hamburger:hover {
+  transform: scale(0.9);
 }
 .phone {
   position: fixed;
@@ -134,15 +138,52 @@ img {
   z-index: 5000;
   transition: 0.2s ease-in-out all;
 }
+.div1 {
+  display: flex;
+  margin: 1rem auto;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+}
 .close {
-  position: absolute;
   font-size: 3rem;
   right: 2rem;
   cursor: pointer;
+  transition: 0.3s ease-in-out all;
 }
 .close:hover {
-  transform: rotate(-90deg);
-  transition: 0.3s ease-in-out all;
-  color: black;
+  transform: rotate(-90deg) scale(0.9);
+  color: rgb(219, 89, 89);
+}
+.side-bar ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  flex-direction: column;
+  list-style-type: none;
+}
+/* .side-bar li {
+  all: unset;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+} */
+/* .side-bar li:hover {
+  background-color: #1f1f1f;
+  color: whitesmoke;
+  padding-left: 1.25rem;
+} */
+.side-bar a {
+  display: block;
+  width: 100%;
+  color: hsl(210, 22%, 49%);
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+  transition: 0.4s all ease-in-out;
+}
+.side-bar a:hover {
+  background-color: #d67979;
+  color: whitesmoke;
+  padding-left: 1.75rem;
 }
 /* end sidebar */
